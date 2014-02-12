@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MovieReviews</title>
+    <link href="s40-theme/css/s40-theme.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript" src="s40-theme/js/screensize.js"></script>
+    <script language="javascript" type="text/javascript" src="js/main.js"></script>
+    <link href="basic.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">		
+		function refreshPageContent() {
+				// Add code for refreshing the page here...				
+		}		
+	</script>   
+</head>
+<body  onload="init_script();">
+    <div class="ui-page">
+        <!-- header -->
+        <div class="ui-header">
+            <div class="ui-title inline"><h2>Movie Reviews</h2></div><div class="refresh-icon inline">
+	        <a onclick="refreshPageContent();"><img alt="icon" src="s40-theme/images/refresh_40x40.png"/></a></div>
+        </div>
+        <div class="ui-content">
+ 			
+			<!-- tab-control -->
+			<div class="ui-tab-control inline">
+			 <div class="ui-tab ui-tab-selected inline" id="tab_1" onclick="mwl.setGroupTarget('#tab_control_content', '#tab_1_content', 'ui-show', 'ui-hide');mwl.switchClass('#tab_1', 'ui-tab-not-selected', 'ui-tab-selected');mwl.switchClass('#tab_2', 'ui-tab-selected', 'ui-tab-not-selected');mwl.switchClass('#tab_3', 'ui-tab-selected', 'ui-tab-not-selected');queryType=0;"><div style="margin-top:10px;">Latest</div></div><div class="ui-tab ui-tab-not-selected inline" id="tab_2" onclick="mwl.setGroupTarget('#tab_control_content', '#tab_2_content', 'ui-show', 'ui-hide');mwl.switchClass('#tab_1', 'ui-tab-selected', 'ui-tab-not-selected');mwl.switchClass('#tab_2', 'ui-tab-not-selected', 'ui-tab-selected');mwl.switchClass('#tab_3', 'ui-tab-selected', 'ui-tab-not-selected');"><div style="margin-top:10px;">Search</div></div><div class="ui-tab ui-tab-not-selected inline" id="tab_3" onclick="mwl.setGroupTarget('#tab_control_content', '#tab_3_content', 'ui-show', 'ui-hide');mwl.switchClass('#tab_1', 'ui-tab-selected', 'ui-tab-not-selected');mwl.switchClass('#tab_2', 'ui-tab-selected', 'ui-tab-not-selected');mwl.switchClass('#tab_3', 'ui-tab-not-selected', 'ui-tab-selected');"><div style="margin-top:10px;">About</div></div>
+		    </div>
+				      
+							
+			   <div class="ui-tab-content-row" id="tab_control_content">
+			     <div id="tab_1_content" class="ui-show">
+
+					<div id="thumbnailPage" style="text-align: center" class="hide" ></div>
+					<div id="detailsPage" class="hide"></div>
+					<div id="reviewPage" class="hide"></div>
+					 <div id="loadingPage" style="vertical-align: center; text-align: center;" class="show">
+					 <h2>Loading data...<br>Please wait!</h2>
+					 </div>
+					
+			     </div>
+			     <div id="tab_2_content" class="ui-hide">
+					
+					<div id="searchBar" class="show">
+					
+					<!-- text-field-with-button -->
+						<div class="ui-fieldset-text-button">
+							<table class="header_table" border="0" cellspacing="0"
+								cellpadding="0">
+								<tr>
+									<td><input type="text" id = "lineEdit"
+										class="ui-text-input-with-adj-button" />
+									</td>
+									<td><input name="button" type="submit"
+										class="ui-button ui-fixed-40px" id="button" value="Go" 
+										onclick="searchMovies();"/>
+									</td>
+								</tr>
+							</table>
+							
+						</div>
+					</div>
+					
+					<div id="searchResults" class="show"></div>
+					<div id="searchLoadingPage" style="vertical-align: center; text-align: center;" class="hide">
+					 <h2>Search in progress...<br>Please wait!</h2>
+					 </div>
+					 
+					<div id="searchDetailsPage" class="hide"></div>
+					 
+				<div style="text-align: center;">
+						<input type="button" name="clearButton" class="ui-button" value="Clear results" onclick="mwl.switchClass('#searchResults', 'show', 'hide');mwl.switchClass('#searchDetailsPage', 'show', 'hide'); "/>
+					</div>
+				
+					
+			     </div>
+			     <div id="tab_3_content" class="ui-hide">
+			     <div style="text-align: center;">
+					 <br>
+					 <h2>Movie Reviews</h2>
+					 <br>Version: 1.0 <br>
+					 <br>Avnee Nathani
+					 <br>avnee.nathani@gmail.com
+					</div>				 
+			     </div>
+			   </div> 	
+			</div>
+ 			
+		</div>
+    
+</body>
+</html>

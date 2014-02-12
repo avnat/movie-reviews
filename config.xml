@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <widget xmlns="http://www.w3.org/ns/widgets" height="200" id="http://MovieReviews" version="1.0" viewmodes="windowed fullscreen" width="200">
+    
+    <name short="MovieReviews">MovieReviews</name>    
+
+    <description>
+       MovieReviews is an application which features latest movies, shows details (release date, cast, synopsis) and reviews for the selected movies. The application also allows the users to search for other movies from the rotten tomatoes movie database.
+    </description>
+    
+    <!-- Note: Author href MUST BE Url encoded 
+        @see http://en.wikipedia.org/wiki/Percent-encoding -->    
+    <author email="avnee.nathani@gmail.com" href="http://www.avnee.wordpress.com">
+        Avnee Nathani
+    </author>
+    
+    <icon src="icon.png"/>
+
+    <content src="index.html"/>
+    
+    <license>
+	   Copyright Avnee Nathani, 2013.
+    </license>
+    
+   	<feature name="nokia://s40.nokia.com/SAWRT/2.0" required="true" />
+</widget>
